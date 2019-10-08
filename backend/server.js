@@ -1,17 +1,19 @@
-const express = require('express')
+const express = require("express");
 
-const app = express()
+const app = express();
 
 app.get("/", (req, res, next) => {
-  res.send("It works!")
-})
+  res.send("It works!");
+});
 
-app.listen(9090, err => {
+const port = process.env.PORT || 9090;
+
+app.listen(port, err => {
   if (err) {
-    console.error(err)
-    process.exit(1)
-    return
+    console.error(err);
+    process.exit(1);
+    return;
   }
 
-  console.log(`Server listening on port 9090.`)
-})
+  console.log(`Server listening on http://localhost:${port}`);
+});

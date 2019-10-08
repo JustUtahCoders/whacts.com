@@ -4,9 +4,20 @@
   "author": "Joel Denning",
   "license": "MIT",
   "scripts": {
-    "start": "node backend/server.js"
+    "start": "node backend/server.js",
+    "check-format": "prettier 'backend/**/*' --check"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "husky": "^3.0.8",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1"
   }
 }
