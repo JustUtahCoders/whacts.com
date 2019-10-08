@@ -1,0 +1,12 @@
+{
+  "name": "whacts.com",
+  "repository": "git@github.com:JustUtahCoders/whacts.com.git",
+  "author": "Joel Denning",
+  "license": "MIT",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
