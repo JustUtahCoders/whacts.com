@@ -4,10 +4,10 @@
   "author": "Joel Denning",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon backend/server.js",
+    "start": "node backend/server.js",
     "develop": "concurrently -n w: yarn:develop-*",
     "develop-frontend": "webpack-dev-server --mode=development",
-    "develop-backend": "NODE_ENV=production yarn start",
+    "develop-backend": "NODE_ENV=production nodemon backend/server.js",
     "build-frontend": "webpack --env.buildHashes=true",
     "check-format": "prettier 'backend/**/*' --check"
   },
