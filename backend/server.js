@@ -1,10 +1,15 @@
+const path = require("path");
 const express = require("express");
 
 const app = express();
 
-app.get("/", (req, res, next) => {
-  res.send("It works 2!");
-});
+exports.app = app;
+
+app.set("view engine", "ejs");
+app.use("/dist", express.static(path.resolve(__dirname, "../dist")));
+
+require("./apis/404.api");
+require("./index-html.endpoint.js");
 
 const port = process.env.PORT || 9090;
 
