@@ -5,7 +5,7 @@ script: yarn check-format
 deploy:
   provider: gae
   keyfile: app-engine-secret.json
-  project: utah-expungements-org
+  project: whacts
   skip_cleanup: true
   on:
     branch: master
